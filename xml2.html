@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intital-scale=1.0">
+        
+        <style>
+
+            table, th, td
+            {
+                border-style: solid;
+                border-collapse: collapse;
+            }
+
+            tr 
+            {
+                font-family: Helvetica
+            }
+
+            caption 
+            {
+                font-family: Helvetica
+            }
+
+            .p1
+            {
+                color: aliceblue;
+            }
+
+
+            .p1 {
+                
+                color: rgb(5, 21, 35);
+            }
+            
+            
+           .container {    
+                column-count: 2;
+                column-gap: 100px;
+                column-rule-style: solid;
+                column-rule-width: 2px;
+                column-rule-color: #000000;
+            }
+
+           .img2 {
+                float: right;
+                width: 500px;
+                height: 450px;
+                padding-bottom: 30%;
+                padding-top: 30%;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+            }
+        
+            .letters1 {
+             
+                float: left;
+                
+            }
+
+            .letters2 {
+
+                float: right;
+            }
+
+            p {
+                
+                text-indent: 40px;
+
+            }
+
+            p.a {
+                
+                text-indent: 470px;
+                
+                
+            }
+
+        </style>
+    
+    </head>
+        
+        
+            
+            
+    <body topmargin="50" leftmargin="50">
+
+        <br> 
+        <h1 align="center">
+
+            <font face="Cascadia Code SemiBold" size="5">
+                <h1><b>News</b></h1>
+                
+            </font>
+            
+        <hr size="10" noshade color="468284">
+                    
+    </body>
+        
+        
+        
+        <table class="p.solid" id="parts" width="100%" and height="50%">
+                    
+            <thead>
+                <tr>
+                
+                    <th>
+                    
+                        <font face="Cooper Black" size="5">Year</font> </a>
+                
+                    </th>
+        
+                    <th>
+                            
+                        <font face="Cooper Black" size="5">Death Rate</font> </a>
+                        
+                    </th>
+        
+                        
+        
+                    <th>
+                                    
+                        <font face="Cooper Black" size="5">Growth Rate</font> </a>
+                    
+                    </th>
+        
+                </tr>
+
+            </thead>     
+        
+        </table>
+                
+        <br>
+        <hr size="10" noshade color="468284">
+                
+        <div id="container"></div>
+            
+            <script>
+
+                // 1) creating a new XMLHttpRequest object
+                const xhr = new XMLHttpRequest();
+
+                // 2) setting it up to perform a GET request to fetch xml_content1.xml
+                xhr.open('GET', 'xml_content1.xml', true);
+
+                // 3) When the request is complete, the onload function is called. 
+                // If the status is between 200 and 399, it means the request was successful.
+                // The XML data is then parsed into a DOM object.
+                // Retrieving a list of elements with the tag name 'item'.
+                // Creating a new table element.
+                // Looping through each 'item' element, extract the 'name' and 'description', 
+                // and create rows and cells for each in the table.
+                // The table is appended to the element with the id 'container'.
+                xhr.onload = function () {
+                    if (xhr.status >= 200 && xhr.status < 400) {
+
+                        const xmlString = xhr.response;
+                        const parser = new DOMParser();
+                        const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
+                        const items = xmlDoc.getElementsByTagName('item');
+                        const table = document.createElement('table');
+                   
+
+                    for (let i = 0; i < items.length; i++) {
+
+                        const item = items[i];
+                        const itemName = item.getElementsByTagName('name')[0].textContent;
+                        const itemDescription = item.getElementsByTagName('description')[0].textContent;
+
+                        const row = document.createElement('tr');
+
+                        const nameCell = document.createElement('td');
+                        nameCell.textContent = itemName;
+
+                        const descriptionCell = document.createElement('td');
+                        descriptionCell.textContent = itemDescription;
+
+                        row.appendChild(nameCell);
+                        row.appendChild(descriptionCell);
+
+                        table.appendChild(row);
+
+                    }
+
+                    
+                    document.getElementById('container').appendChild(table);
+                } else {
+                    console.error('Error fetching XML:', xhr.statusText);
+                }
+
+            };
+
+            // 4) If there's an error during the request,
+            // the onerror function is called, which logs an error message
+            xhr.onerror = function () {
+                console.error('Error fetching XML:', xhr.statusText);
+            };
+
+            xhr.send();
+                        
+
+        </script>
+
+</html>

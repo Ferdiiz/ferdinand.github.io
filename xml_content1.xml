@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mortality>
+
+    <!-- 1 -->
+    <part>
+        <year>2023</year>
+        <deathrate>7.711</deathrate>
+        <growthrate>0.430%</growthrate>
+    </part>
+
+    <part>
+        <year>2022</year>
+        <deathrate>7.678</deathrate>
+        <growthrate>0.430%</growthrate>
+    </part>
+
+    <part>
+        <year>2021</year>
+        <deathrate>7.645</deathrate>
+        <growthrate>0.430%</growthrate>
+    </part>
+
+    <part>
+        <year>2020</year>
+        <deathrate>7.612</deathrate>
+        <growthrate>0.440%</growthrate>
+    </part>
+
+    <part>
+        <year>2019</year>
+        <deathrate>7.579</deathrate>
+        <growthrate>0.440%</growthrate>
+    </part>
+
+    <part>
+        <year>2018</year>
+        <deathrate>7.546</deathrate>
+        <growthrate>-0.320%</growthrate>
+    </part>
+
+    <part>
+        <year>2017</year>
+        <deathrate>7.570</deathrate>
+        <growthrate>-0.320%</growthrate>
+    </part>
+    
+    <part>
+        <year>2016</year>
+        <deathrate>7.594</deathrate>
+        <growthrate>-0.330%</growthrate>
+    </part>
+
+    <part>
+        <year>2015</year>
+        <deathrate>7.619</deathrate>
+        <growthrate>-0.310%</growthrate>
+    </part>
+
+    <part>
+        <year>2014</year>
+        <deathrate>7.643</deathrate>
+        <growthrate>-0.310%</growthrate>
+    </part>
+    <!-- 10 -->
+
+</mortality>
