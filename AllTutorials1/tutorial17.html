@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title> Form - Text Input </title>
+        <link rel=icon href="sunflower.jpg" type="image/jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <style>
+
+        table  
+        {
+            color: powderblue;
+            border-style: solid;
+            border-collapse: collapse;
+            background-color: rgba(119, 88, 148, 0.423);
+        }
+
+        tr 
+        {   
+            color: black;
+            font-family: Helvetica
+        }
+
+        caption 
+        {
+            font-family: Helvetica
+        }
+
+        .p1
+        {
+            color: rgb(0, 0, 0);
+            
+        }
+
+        .container {    
+            column-count: 2;
+            column-gap: 100px;
+            column-rule-style: solid;
+            column-rule-width: 2px;
+            column-rule-color: #000000;
+        }
+
+        .image1 {
+
+            background-image: url(Water.gif); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+   
+    </style>
+
+    <!-- <p style="background-color: powderblue; color: #696969; font-family: Verdana; font-size: 160%; 
+    text-align: center; width: 60%; height: 120%;" >
+    <br>  -->
+
+    <body topmargin="20" leftmargin="50" class="image1">
+        
+        <table width="60%" and height="50%" align="center">  
+        <center> 
+            <form>
+               
+                <h1 align="center">
+                <font face="Cascadia Code SemiBold" size="3">
+                <h1 style="color: beige;"><b><br>Personal Details:</b></h1>
+                
+            </font>
+                <br> 
+                <tr>
+                    <td style="background-color: rgba(221, 160, 221, 0.432);"><b>First Name:</b> </td> 
+                    <td><input type="text" name="fname" size="40" maxlength="5"> </td>
+                </tr>
+                
+
+                <tr>
+                    <td style="background-color: rgba(255, 255, 0, 0.292);"><b>Last Name:</b></td> 
+                    <td><input type="text" name="Iname"></td>
+                </tr>
+                
+
+                <!-- radio button means able to only choose one -->
+                <tr>
+                    <td style="background-color: rgba(172, 255, 47, 0.301);"> 
+                        <b>Gender:</b>
+                    </td>
+                    <td style="color: aliceblue;">
+                        <input type="radio" name="Gender" value="Male"> <b> Male </b>
+                        <input type="radio" name="Gender" value="Female"> <b> Female </b>
+                    </td>
+                </tr>
+
+                <tr>
+                <td style="background-color: rgba(127, 255, 212, 0.323);"><b> Your favorite subjects:</b></td> 
+                <td style="color: rgb(255, 255, 255);">
+                    <input type="checkbox" name="fav_sub" value="DCS4103"><b> DCS4103 </b>
+                    <input type="checkbox" name="fav_sub" value="DCS3003"><b> DCS3003 </b> 
+                    <input type="checkbox" name="fav_sub" value="MST1003"><b> MST1003 </b> 
+                    <input type="checkbox" name="fav_sub" value="MST2003"><b> MST2003 </b> 
+                </td>
+                </tr>
+
+                
+                <tr>
+                    <td style="background-color: rgba(216, 112, 147, 0.259);"><b>Address:</b></td>
+                    <td><textarea rows="4" cols="30" name="Address"></textarea></td>
+                </tr>
+
+                
+                <tr>
+                    <td style="background-color: rgba(255, 228, 196, 0.281);"><b>Date of birth:</b></td>
+                    <td><input type="date" name="dob" ></td>
+                </tr>
+                
+                <tr>
+                    <td style="background-color: rgba(210, 105, 30, 0.318);"><b> Login password: </b></td>
+                    <td><input type="password" name="loginpass"></td>
+                </tr>
+                
+
+                <tr>
+                    <td style="background-color: rgba(143, 188, 143, 0.216);">
+                        <b>Course:</b>
+                    </td>
+
+                    <td>
+                        <select>
+                            <option value="0"> - List of Course - </option>
+                            <optgroup label="Diploma In Computer Science">
+                                <option value="DCS_S1">Semester 1</option>
+                                <option value="DCS_S2">Semester 2</option>
+                                <option value="DCS_S3">Semester 3</option>
+                                <option value="DCS_S4">Semester 4</option>
+                                <option value="DCS_S5">Semester 5</option>
+                                <option value="DCS_S6">Semester 6</option>
+                            </optgroup>
+
+                            <option value="DIB">  Diploma In Business </option>
+                            <option value="DAS">  Diploma In Airline Services  </option>
+                        </select>
+                    </td>
+                </tr>  
+
+                
+             
+                <tr>
+                    
+                    <td colspan="2" align="center">
+                        <input type="submit" value="submit">
+                        <input type="reset"  value="reset">
+                    </td>
+                
+
+                </tr>
+
+            </form>
+
+        </center>
+        </table>  
+    </body>
+
+
+</html>
