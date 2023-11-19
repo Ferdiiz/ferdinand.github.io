@@ -1,0 +1,834 @@
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* overall all effects on all */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+/* overall for all body  */
+body{
+    
+    height: 100%;
+    /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    /* overflow-y: hidden; */
+    
+    width: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* removing vertical scrollbar */
+body::-webkit-scrollbar{
+    display: none;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* overall all effects on all */
+h1 { 
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+
+}
+
+h2 { 
+    font-size: 46px;
+    line-height: 54px;
+    color: #222
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p { 
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+/* for features button spacing */
+.section-p1 {
+    padding: 90px 80px;
+}
+
+/* For the banner (5) */
+.section-m1 {
+    margin: 40px 0;
+}
+
+.section-m2 {
+    margin: 0 0;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 17px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+
+    /* hovering effect  */
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    /* slow raising effect after cursor hover over */
+    transition: 0.2s;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.header, .footer{
+    background-color: #001627;
+    color: white;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* v stands for viewport */
+/* editing each slides of cards after scrolling  */
+.card{
+
+    /* 100vw is for @media */
+    width: auto;
+    height: 100vh;
+    background: rgb(20, 50, 100, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    /* navbar stays after scrolling */
+    position: sticky;
+    top: 0;
+
+    
+    overflow-y: scroll;
+
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.card img{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.card-content{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+/* editing navbar */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2% 10%;
+    width: 100%;
+
+    /* background color and shadow of it */
+    background-color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    /* as shadow of the entire navbar header is not showing after image is added to the home page */
+    z-index: 999;
+
+    /* so that the navbar is always up there even if user scroll down */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* How the navigation bar is seperated */
+#navbar li{
+    list-style: none;
+    align-items: flex-end;
+
+    /* spacing */
+    padding: 0 4%;
+    /* will redirect the under position to under the word */
+    position: relative;
+}
+
+/* Part 2 */
+/* how the font look like */
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dbdada;
+
+    /* how it slowly light up with the color */
+    transition: 0.3s ease;
+}
+
+/* When mouseover how it look like what color it produce */
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(234, 225, 111);
+}
+
+/* Part 3 */
+#navbar li a.active::after,
+/* Cursor hover over the nav text the text will be coloured with underline */
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(118, 216, 210);
+
+    /* position under console.log will somehow be at the bottom left of the screen therefore the primary individual
+    of #navbar li is needed to have position relative as it will help link the underline to the very first code
+    which involves the each navbar word */
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* hiding toggle buttons */
+/* display flex to check */
+/* editing for mobile devices */
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+/* hiding toggle cross icon */
+#close{
+    display: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* second card */
+#hero{
+    background-image: url(Img/shoe8.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+
+    /* be default flex is in row so flex direction is needed */
+    display: flex;
+    flex-direction: column;
+
+    /* flex start -> float left */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+    color: rgb(233, 233, 115);
+}
+#hero h1{
+    color: #115656;
+}
+
+#hero h2{
+    color: #000000;
+}
+#hero button{
+    background-image: url(/Img/button3.jpeg);
+    opacity: 1;
+
+    /* rounded shape and sizes */
+    border-radius: 5px;
+    height: 60px;
+    width: 170px;
+
+    /* how it fits with no repeat and how it can only see the background image */
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    border: 0;
+    padding: 21px;
+    cursor: pointer;
+
+    /* font */
+    font-size: large;
+    
+}
+
+/* third card */
+#hero2{
+    background-image: url(Img/shoe7.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+
+    /* be default flex is in row so flex direction is needed */
+    display: flex;
+    flex-direction: column;
+
+    /* moves it to the right -> flex end */
+    align-items: flex-end;
+
+    justify-content: center;
+    
+}
+
+#hero2 h4{
+    padding-bottom: 15px;
+    
+    
+}
+#hero2 h1{
+    color: #bbc66a;
+}
+#hero2 button{
+    background-image: url(/Img/button11.jpeg);
+    opacity: 1;
+
+    /* rounded shape and sizes */
+    border-radius: 5px;
+    height: 60px;
+    width: 170px;
+
+    /* how it fits with no repeat and how it can only see the background image */
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    border: 0;
+    padding: 21px;
+    cursor: pointer;
+
+    /* font */
+    font-size: large;
+    
+}
+#hero2 h4 {
+    color: rgb(233, 233, 115);
+}
+
+#hero2 h2 {
+    color: #088178;
+}
+#hero2 p{
+    color: #b9d1f3;
+}
+
+/* center all content inside of each section by making a grid */
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* newsletter */
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(/Img/news2.jpeg);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+    border: none;
+    padding: 4.5% 7%;
+
+    /* media is 101.3 */
+    
+    width: auto;
+    
+}
+
+/*  Sign up for news letter thing  */
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Get email update something */
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+
+/* highlighted word special offer */
+#newsletter p span{ 
+
+    color: #ffbd27;
+}
+
+/* editing the input */
+#newsletter input{ 
+
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+
+    /* 2 corner of radius become sharp corners */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* editing the button */
+#newsletter button{
+
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+
+    /* 2 corner of radius become sharp corners */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* just the footer with the copyright logo */
+
+footer{
+    height: 55vh;
+}
+footer .col{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+}
+
+footer .logo{
+    margin-bottom: px;
+}
+
+footer .h4{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 6px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Part 2 */
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Part 3 */
+footer .copyright{
+    width: 100%;
+    text-align: right;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* media as in other device */
+/* fixing responsiveness */
+@media (max-width: 799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+
+        /* -300px */
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #000000;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    
+
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    /* cancel button when toggled */
+    #close{
+
+        /* as hiding the toggle close icon from the header when not toggled hides the close icon itself
+        display initial is needed so that when device has toggle icon and when toggled close icon can be seen */
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+}
+
+@media(max-width:1080px){
+
+    .nav{
+        padding: 15px;
+    }
+
+    section{
+        padding: 3rem 0 2rem;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        margin-top: 2rem !important;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .nav{
+        padding: 11px;
+    }
+
+    .logo{
+        font-size: 1rem;
+    }
+
+    .cart{
+        width: 320px;
+    }
+}
+
+@media(max-width: 360px){
+    
+    .shop{
+        margin-top: 1rem !important;
+    }
+
+    .cart{
+        width: 280px;
+    }
+}
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* class -> hidden */
+/* css transition from left to right */
+
+.hidden{
+
+    /* making element invisible */
+    opacity: 0;
+
+    /* making it into a fade animation when scrolling  */ 
+    transition: all 1s;
+
+    /* extra animation */
+    /* moving from left to right with a smooth blur */
+    filter: blur(5px);
+    transform: translateX(-100%);
+
+}
+
+@media(prefers-reduced-motion){
+
+    /* prevent constant animation */
+    .hidden{
+        transition: none;
+    }
+}
+
+.show{
+
+    /* making element visible */
+    opacity: 1;
+
+    /* extra animation */
+    /* limiting how right it can go with a smooth blur */
+    filter: blur(0);
+    transform: translate(0);
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* buttons next next */
+.container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #181616;
+    overflow-x: hidden;
+     
+}
+
+/* arranging the overall slides */
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+
+/* arranging individual slides */
+.item{
+    width: 16%;
+    height: 45%;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow:  0 30px 50px #505050;
+    
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* animation actions */
+
+/* first and second pic to overlap each other  */
+/* first nth child is the background */
+.item:nth-child(1),
+.item:nth-child(2){
+
+    /* editing the first nth child (the background) */
+    left:0;
+    top:0;
+
+    /* aligning it to the top left corner of the container */
+    transform: translate(0,0);
+
+    /* aligning to the corner of container without rounded shape as container is sharp corner */
+    border-radius: 0;
+
+    /* widening first nth child to all corner */
+    width:100%;
+    height:100%;
+
+    /* looks as though covered the container already without any hovering */
+    box-shadow: none;
+  
+}
+
+/* first box image to be seen on the right side */
+.item:nth-child(3){
+    left:50%;
+}
+
+/* second box image to be seen on the right side */
+.item:nth-child(4){
+    left:calc(50% + 220px);
+    
+}
+
+/* third box image to be seen on the right side */
+.item:nth-child(5){
+    left:calc(50% + 440px);
+}
+
+/* the very left side of the image apart from the first and last pic on the right to be invisible */
+.item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity: 0;
+}
+
+/* editing the alignment of the word content on the left side */
+.item .content{
+    position: absolute;
+    top:50%;
+    left:100px;
+    width:300px;
+    text-align: left;
+    padding:0;
+    color:#eee;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+
+
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* editing the first sentence of the word content */
+
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards
+}
+
+/* editing the final sentence of the word content */
+.item .des{
+    margin:20px 0;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards
+}
+
+/* editing the button */
+.item button{
+    padding:10px 20px;
+    border:none;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* enabling animation for name, des, button */
+@keyframes showcontent{
+
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+
+    }to{
+
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+
+    }
+
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* aligning overall the left and right button below */
+.buttons{
+    position: absolute;
+    bottom:30px;
+    z-index: 222222;
+    text-align: center;
+    width:100%;
+}
+
+/* arranging the shapes of the two button */
+.buttons button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid #555;
+    transition: 0.5s;
+
+/* when cursor hover overall the button lights up */
+}.buttons button:hover{
+    background-color: #bac383;
+
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#header2 {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/Img/Earth4.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+} 
+
+.text1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+     
+}
+
+ 
+
+/* //////////////////////////////////// */
+@media (max-width:768px) {
+
+    #hero {
+        background-position: 40%;
+    }
+
+    #hero2{
+        background-position: 35%;
+    }
+
+}
+ 
+
