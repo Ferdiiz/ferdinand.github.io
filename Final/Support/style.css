@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #111;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.service{
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 45px;
+    margin: auto;
+}
+
+.max-width h1{
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+
+}
+
+.max-width h1::after{
+
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    padding: 50px 25px;
+    width: calc(26% - 20px);
+    border-radius: 6px;
+    background: #222;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.card:hover{
+    background-color: #dc143c;
+
+}
+
+.box{
+    transition: all 0.3s ease;
+}
+
+.card:hover .box{
+    transform: scale(1.05);
+}
+
+.box i{
+    font-size: 50px;
+    color: #dc143c;
+    transition: color 0.3s ease;
+
+}
+
+.card:hover .box i{
+    color: #fff;
+}
+
+.box h3{
+    font-size: 25px;
+    padding: 10px 0 7px;
+}
+/* /////////////////////////////////////// */
+@media screen and (max-width: 1190px) {
+
+    .max-width{
+
+        padding: 0 25px;
+
+    }
+
+    .card{
+
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .card{
+
+        width: 100%;
+
+    }
+
+}
+/* ////////////////// */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2% 10%;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* background color and shadow of it */
+    background-color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    /* as shadow of the entire navbar header is not showing after image is added to the home page */
+    z-index: 999;
+
+    /* so that the navbar is always up there even if user scroll down */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* How the navigation bar is seperated */
+#navbar li{
+    list-style: none;
+    align-items: flex-end;
+
+    /* spacing */
+    padding: 0 4%;
+    /* will redirect the under position to under the word */
+    position: relative;
+}
+
+/* Part 2 */
+/* how the font look like */
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dbdada;
+
+    /* how it slowly light up with the color */
+    transition: 0.3s ease;
+}
+
+/* When mouseover how it look like what color it produce */
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(234, 225, 111);
+}
+
+/* Part 3 */
+#navbar li a.active::after,
+/* Cursor hover over the nav text the text will be coloured with underline */
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(118, 216, 210);
+
+    /* position under console.log will somehow be at the bottom left of the screen therefore the primary individual
+    of #navbar li is needed to have position relative as it will help link the underline to the very first code
+    which involves the each navbar word */
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* hiding toggle buttons */
+/* display flex to check */
+/* editing for mobile devices */
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+/* hiding toggle cross icon */
+#close{
+    display: none;
+}
+/* /////////////////////////////////////////// */
+@media (max-width: 799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+
+        /* -300px */
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #000000;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    
+
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    /* cancel button when toggled */
+    #close{
+
+        /* as hiding the toggle close icon from the header when not toggled hides the close icon itself
+        display initial is needed so that when device has toggle icon and when toggled close icon can be seen */
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+}
