@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Img/logo7.png" type="image/png" >
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <title>Cart</title>
+        
+    </head>
+
+    <body>
+
+        <!-- header (1) -->
+        <header>
+            <!-- Nav -->
+            <div class="nav container">
+                <a href="#"><img src="img/logo7.png" class="logo" alt="" style="height: 18%; width: 18%;"></a>
+                <div>
+
+                    <ul id="navbar">
+
+                        <li><a href="/index.html" >Home</a></li>
+                        <li><a href="" class="active">Shop</a></li>
+                        <li><a href="/About/about.html">About</a></li>
+                        <li><a href="/Support/support.html">Support</a></li>
+                        <li><a href="/Log2/log.html">Login</a></li>
+                        
+                        <!-- cancel button when toggled -->
+                        <a href="#" id="close"><img src="arrow.png" width="45%" height="45%"></i></a>
+
+
+                    </ul>
+
+                </div>
+                
+                 
+                <div id="mobile">
+                
+                     
+                    <i id="bar"><img src="h1.jpeg" width="100%" height="100%"></i>
+
+                </div>
+    
+
+                <i class='bx bx-shopping-bag' id="cart-icon"></i>
+
+                <div class="cart">
+
+                    <h2 class="cart-title">
+                        Your Cart
+                    </h2>
+
+                    <!-- Content -->
+                    <div class="cart-content">
+
+                    </div>
+
+                    <!-- total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+
+                    <!-- Buy button -->
+                    <button type="button" class="btn-buy"> Buy now </button>
+
+                    <!-- Cart Close -->
+                    <i class='bx bx-x' id="close-cart"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- content (2) -->
+
+        <!-- Category 0 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Collaborated Products</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="img/Air1(2).png" alt="" class="product-img">
+                    <h2 class="product-title">Air Jordan 1 "Chicago"<br> Off-White The 10</h2>
+                    <span class="price">$8358</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air2(3).png" alt="" class="product-img">
+                    <br> 
+                    <h2 class="product-title">Jordan 1 Retro High <br> Off-White Euro</h2>
+                    <span class="price">$5630</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 3 -->
+                <div class="product-box">
+                    <br><br><br>
+                    <img src="img/Air3.png" alt="" class="product-img">
+                    <h2 class="product-title">Jordan 1 Retro High <br> Dior</h2>
+                    <span class="price">$10513</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 4 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air4(2).png" alt="" class="product-img">
+                    <br>
+                    <h2 class="product-title">Jordan 5 Retro <br> Supreme Desert Camo</h2>
+                    <span class="price">$672</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 5 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air5.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Jordan 1 Retro High OG  <br>Travis Scott Mocha  </h2>
+                    <span class="price">$8358</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 6 -->
+                <div class="product-box">
+                    <br><br><br>
+                    <img src="img/Air6(2).png" alt="" class="product-img">
+                    <h2 class="product-title"> Louis Vuitton <br> Nike Air Force 1 Low <br> By Virgil Abloh White Green </h2>
+                    <span class="price">$9000</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 7 -->
+                <div class="product-box">
+
+                    <img src="img/Air9.png" alt="" class="product-img">
+                    
+                    <h2 class="product-title">Nike SB Dunk Low <br> Ben & Jerry's Chunky Dunky </h2>
+                    <span class="price">$1931</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 8 -->
+                <div class="product-box">
+                    <br><br><br><br>
+                    <img src="img/Air10.jpg" alt="" class="product-img">
+                    <br><br> 
+                    <h2 class="product-title">Nike SB Dunk Low <br>Travis Scott <br>(Special Box) </h2>
+                    <span class="price">$1400</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                
+
+            </div>
+
+        </section>
+
+        <!-- Category 1 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Shoes</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <br><br> 
+                    <img src="img/Air11.png" alt="" class="product-img">
+                    <h2 class="product-title">Nike SB Dunk Low<br> Concepts Purple <br>Lobster</h2>
+                    <span class="price">$1060</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air12.png" alt="" class="product-img">
+                    <br>  
+                    <h2 class="product-title">Nike SB Dunk Low <br> Concepts Green <br>Lobster  </h2>
+                    <span class="price">$1499</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 3 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air13.png" alt="" class="product-img">
+                    <br>
+                    <h2 class="product-title">Nike SB Dunk Low<br>Concepts Red Lobster </h2>
+                    <span class="price">$12850</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 4 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air15.png" alt="" class="product-img">
+                    <br>
+                    <h2 class="product-title">Nike SB Dunk Low<br>Atlas 35MM Grey</h2>
+                    <span class="price">$275</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 5 -->
+                <div class="product-box">
+                    <br><br><br><br>
+                    <img src="img/Air16.png" alt="" class="product-img">
+                    <br><br><br>
+                    <h2 class="product-title">Nike SB Dunk Low<br>Piet Mondrian  </h2>
+                    <span class="price">$1100</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 6 -->
+                <div class="product-box">
+                    <br><br><br>
+                    <img src="img/Air17.png" alt="" class="product-img">
+                    <h2 class="product-title"> Nike SB Dunk Low <br> Black Midnight Fog </h2>
+                    <span class="price">$577</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 7 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air18.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Jordan 1 Retro High<br> Golf Fragment <br> Black White</h2>
+                    <span class="price">$170</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 8 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/Air8(2).png" alt="" class="product-img">
+                    <br>  
+                    <h2 class="product-title">Jordan 1 Retro High <br>Trophy Room Chicago </h2>
+                    <span class="price">$1180</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                
+
+            </div>
+
+        </section>
+
+        <!-- Category 2 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Clothings</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="img/shirt2.png" alt="" class="product-img">
+                    <h2 class="product-title">Checkered Button Up </h2>
+                    <span class="price">$250</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <img src="img/shirt3.png" alt="" class="product-img">
+                    <h2 class="product-title">Black White Button Up</h2>
+                    <span class="price">$1000</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 3 -->
+                <div class="product-box">
+                    <img src="img/shirt4.png" alt="" class="product-img">
+                    <h2 class="product-title">Mike Blue Pullover</h2>
+                    <span class="price">$4599</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 4 -->
+                <div class="product-box">
+                    <img src="img/shirt5.png" alt="" class="product-img">
+                    <h2 class="product-title"> Mike White Hoody</h2>
+                    <span class="price">$3599</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 5 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/shirt6.png" alt="" class="product-img">
+                    <h2 class="product-title">Mike Light Blue Shirt</h2>
+                    <span class="price">$500</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 6 -->
+                <div class="product-box">
+                    <br>
+                    <img src="img/shirt7.png" alt="" class="product-img">
+                    <h2 class="product-title">Mike Korean shirt <br>edition</h2>
+                    <span class="price">$899</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Category 3 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Electronics</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="img/play1.png" alt="" class="product-img">
+                    <h2 class="product-title">Sony PlayStation 5 PS5 <br> White</h2>
+                    <span class="price">$425</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <img src="img/play2.png" alt="" class="product-img">
+                    <h2 class="product-title">Sony PlayStation <br> Portal Remote Player <br> White </h2>
+                    <span class="price">$321</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 3 -->
+                <div class="product-box">
+                    <img src="img/play3.png" alt="" class="product-img">
+                    <h2 class="product-title">Apple AirPods Max Headphones<br> Silver </h2>
+                    <span class="price">$440</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 4 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/play4.png" alt="" class="product-img">
+                    <h2 class="product-title">Meta Quest 3 <br> 512GB VR Headset</h2>
+                    <span class="price">$490</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+        <!-- Category 4 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Bags</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="img/bag1.png" alt="" class="product-img">
+                    <h2 class="product-title">Nike All in One Bag</h2>
+                    <span class="price">$2599</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <img src="img/bag2.png" alt="" class="product-img">
+                    <h2 class="product-title">Nike Black Office Bag</h2>
+                    <span class="price">$1089</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <div class="product-box">
+                    <br>
+                    <img src="img/bag3.png" alt="" class="product-img">
+                    <br> 
+                    <h2 class="product-title">Nike Shoe Bag</h2>
+                    <span class="price">$928</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <div class="product-box">
+                    <img src="img/bag4.png" alt="" class="product-img">
+                    <h2 class="product-title">Nike Casual Bag</h2>
+                    <span class="price">$534</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Category 5 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Hats</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <img src="img/hat1.png" alt="" class="product-img">
+                    <h2 class="product-title">Mike Black Bucket Hat</h2>
+                    <span class="price">$2509</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <img src="img/hat2.png" alt="" class="product-img">
+                    <h2 class="product-title">Blue Written Cap</h2>
+                    <span class="price">$1489</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 3 -->
+                <div class="product-box">
+                    <img src="img/hat3.png" alt="" class="product-img">
+                    <h2 class="product-title">Beaniez </h2>
+                    <span class="price">$4556</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 4 -->
+                <div class="product-box">
+                    <img src="img/hat4.png" alt="" class="product-img">
+                    <h2 class="product-title">Mike Cowboy Hat <br>Edition</h2>
+                    <span class="price">$3493</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 5 -->
+                <div class="product-box">
+                    <img src="img/hat6.png" alt="" class="product-img">
+                    <h2 class="product-title">Mike Ultra Flaming <br>Cap</h2>
+                    <span class="price">$5078</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Category 6 -->
+        <section class="shop container">
+
+            <h2 class="section-title">Clearance Sales</h2>
+            <div class="shop-content">
+            
+                <!-- Box 1 -->
+                <div class="product-box">
+                    <br><br>
+                    <img src="img/hat5.png" alt="" class="product-img">
+                    <br> 
+                    <h2 class="product-title">Nike Yellow Bucket Hat</h2>
+                    <span class="price">$455</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 2 -->
+                <div class="product-box">
+                    <img src="img/C1.png" alt="" class="product-img">
+                    <h2 class="product-title">Nike White Socks</h2>
+                    <span class="price">$992</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 3 -->
+                <div class="product-box">
+                    <img src="img/C2.png" alt="" class="product-img">
+                    <h2 class="product-title">Nike Goal Keeper's <br>Gloves</h2>
+                    <span class="price">$459</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                <!-- Box 4 -->
+                <div class="product-box">
+                    <br><br><br>
+                    <img src="img/C3.png" alt="" class="product-img">
+                    <br><br>
+                    <h2 class="product-title">Nike Blue Bottle</h2>
+                    <span class="price">$249</span>
+                    <i class="bx bx-shopping-bag add-cart"></i>
+
+                </div>
+
+                
+            </div>
+
+        </section>
+
+        <!-- Newsletter (3) -->
+        <section id="newsletter" class="section-p1 section-m2">
+
+            <div class="newstext">
+
+                <h4>Sign Up For Newsletter</h4>
+                <p> 
+                    Get E-mail updates about our latest shop and <span> special offers. </span> 
+                </p>
+
+            </div>
+
+            <div class="form">
+
+                <input type="text" placeholder="Your email address">
+                <button class="normal"> Sign Up </button>
+
+            </div>
+
+        </section>
+
+        <!-- Contact (4) -->
+        <footer class="section-p1">
+
+            <div class="col">
+
+                
+                <h4>&nbsp;Contact</h4>
+                <br>
+
+                <!-- Strong bolds the address -->
+                <p> &nbsp;<strong>Address:</strong> 564 Wellington Road, Street 32, San Francisco </p>
+                <p> &nbsp;<strong>Phone:</strong> +99 9999 999 / (+99) 99 9999 9999 </p>
+                <p> &nbsp;<strong>Working Hours:</strong> 10:00 - 21:00, Mon - Sat </p>
+
+                <div class="follow">
+
+                    <h4>&nbsp;Follow us</h4>
+
+                    <div class="icon">
+
+                        <i> <img src="Img/follow2.png" alt="" style="height: 10%; width: 11%;"></i>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Copyright license (5) -->
+            <div class="copyright"> 
+                <p>© 1986 Mike Company </p>
+            </div>
+
+
+        </footer>
+
+        <!-- linking to js -->
+        <script src="script.js"></script>
+        <script src="script6.js"></script>
+
+    </body>
+
+</html>
