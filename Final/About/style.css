@@ -1,0 +1,496 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+
+}
+
+ 
+ 
+
+.about{
+    width: 100%;
+    padding: 78px 0px;
+    background-color: #191919;
+
+}
+
+.about img{
+    height: auto;
+    width: 420px;
+}
+
+.about-text{
+    width: 550px;
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ 
+
+.about-text h1{
+    color: white;
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text2 h2{
+    color: white;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+span{
+    color: #f9004d;
+}
+
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+/* editing navbar */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2% 10%;
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* background color and shadow of it */
+    background-color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    /* as shadow of the entire navbar header is not showing after image is added to the home page */
+    z-index: 999;
+
+    /* so that the navbar is always up there even if user scroll down */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* How the navigation bar is seperated */
+#navbar li{
+    list-style: none;
+    align-items: flex-end;
+
+    /* spacing */
+    padding: 0 4%;
+    /* will redirect the under position to under the word */
+    position: relative;
+}
+
+/* Part 2 */
+/* how the font look like */
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dbdada;
+
+    /* how it slowly light up with the color */
+    transition: 0.3s ease;
+}
+
+/* When mouseover how it look like what color it produce */
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(234, 225, 111);
+}
+
+/* Part 3 */
+#navbar li a.active::after,
+/* Cursor hover over the nav text the text will be coloured with underline */
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(118, 216, 210);
+
+    /* position under console.log will somehow be at the bottom left of the screen therefore the primary individual
+    of #navbar li is needed to have position relative as it will help link the underline to the very first code
+    which involves the each navbar word */
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* hiding toggle buttons */
+/* display flex to check */
+/* editing for mobile devices */
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+/* hiding toggle cross icon */
+#close{
+    display: none;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////// */
+.card{
+
+    /* 100vw is for @media */
+    width: auto;
+    height: 100vh;
+    background: rgb(20, 50, 100, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    /* navbar stays after scrolling */
+    position: sticky;
+    top: 0;
+
+    
+    overflow-y: scroll;
+
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.card img{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.card-content{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* /////////////////////////////////////////////////////////////////////////// */
+/* buttons next next */
+.container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #181616;
+    overflow-x: hidden;
+     
+}
+
+/* arranging the overall slides */
+#slide{
+    width:max-content;
+    margin-top:50px;
+}
+
+/* arranging individual slides */
+.item{
+    width: 16%;
+    height: 45%;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.5s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow:  0 30px 50px #505050;
+    
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* animation actions */
+
+/* first and second pic to overlap each other  */
+/* first nth child is the background */
+.item:nth-child(1),
+.item:nth-child(2){
+
+    /* editing the first nth child (the background) */
+    left:0;
+    top:0;
+
+    /* aligning it to the top left corner of the container */
+    transform: translate(0,0);
+
+    /* aligning to the corner of container without rounded shape as container is sharp corner */
+    border-radius: 0;
+
+    /* widening first nth child to all corner */
+    width:100%;
+    height:100%;
+
+    /* looks as though covered the container already without any hovering */
+    box-shadow: none;
+  
+}
+
+/* first box image to be seen on the right side */
+.item:nth-child(3){
+    left:50%;
+}
+
+/* second box image to be seen on the right side */
+.item:nth-child(4){
+    left:calc(50% + 220px);
+    
+}
+
+/* third box image to be seen on the right side */
+.item:nth-child(5){
+    left:calc(50% + 440px);
+}
+
+/* the very left side of the image apart from the first and last pic on the right to be invisible */
+.item:nth-child(n+6){
+    left:calc(50% + 660px);
+    opacity: 0;
+}
+
+/* editing the alignment of the word content on the left side */
+.item .content{
+    position: absolute;
+    top:50%;
+    left:100px;
+    width:300px;
+    text-align: left;
+    padding:0;
+    color:#eee;
+    transform: translate(0,-50%);
+    display: none;
+    font-family: system-ui;
+}
+
+
+.item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* editing the first sentence of the word content */
+
+.item .name{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards
+}
+
+/* editing the final sentence of the word content */
+.item .des{
+    margin:20px 0;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.3s 1 forwards
+}
+
+/* editing the button */
+.item button{
+    padding:10px 20px;
+    border:none;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* enabling animation for name, des, button */
+@keyframes showcontent{
+
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px);
+
+    }to{
+
+        opacity: 1;
+        transform: translate(0,0);
+        filter:blur(0);
+
+    }
+
+}
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* aligning overall the left and right button below */
+.buttons{
+    position: absolute;
+    bottom:30px;
+    z-index: 222222;
+    text-align: center;
+    width:100%;
+}
+
+/* arranging the shapes of the two button */
+.buttons button{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid #555;
+    transition: 0.5s;
+
+/* when cursor hover overall the button lights up */
+}.buttons button:hover{
+    background-color: #bac383;
+
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+ 
+/* just the footer with the copyright logo */
+footer {
+    padding: 1px 75px;
+
+}
+
+footer .col{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+}
+
+footer .logo{
+    margin-bottom: px;
+}
+
+footer .h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Part 2 */
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Part 3 */
+footer .copyright{
+    width: 100%;
+    text-align: right;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* media as in other device */
+/* fixing responsiveness */
+@media (max-width: 799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+
+        /* -300px */
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #000000;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    
+
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    /* cancel button when toggled */
+    #close{
+
+        /* as hiding the toggle close icon from the header when not toggled hides the close icon itself
+        display initial is needed so that when device has toggle icon and when toggled close icon can be seen */
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag{
+        display: none;
+    }
+}
+/* ///////////////////////////////////////// */
+body::-webkit-scrollbar{
+    display: none;
+}
