@@ -237,6 +237,17 @@ header{
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+#header2 {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/Img/Earth4.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+
+} 
 /* second card */
 #hero{
     background-image: url(Img/shoe8.jpg);
@@ -796,17 +807,6 @@ footer .copyright{
 
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
-#header2 {
-
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url(/Img/Earth4.jpg);
-    background-size: 100%;
-    background-position: center;
-    background-attachment: fixed;
-
-} 
 
 .text1{
     display: flex;
