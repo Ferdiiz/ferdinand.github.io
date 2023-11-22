@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+ 
+        .style {
+            position: static;
+            content: "";
+            clear: both;
+            display: table;
+        }
+    
+        table, th, td
+        {
+            border-style: solid;
+            border-collapse: collapse;
+        }
+
+        tr 
+        {
+            font-family: Helvetica
+        }
+
+        caption 
+        {
+            font-family: Helvetica
+        }
+
+        .p1
+        {
+            color: rgb(255, 255, 255);
+        }
+
+        .p2{
+              
+            position: relative;
+            top: 50%;
+            width: 70%;
+            text-align: left;
+            font-size: 18px;
+          
+             
+        }
+
+        .p3{
+            position: relative;
+            top: 50%;
+            width: 97%;
+            text-align: left;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+        }
+
+        .p3 font {
+            color: black;
+        }
+
+        .p4{
+            color: black;
+        }
+
+        #red{
+            color: red;
+        }
+
+        #white{
+            color: white;
+        }
+
+         
+   
+    </style>
+
+</head>
+
+    <body topmargin="30" leftmargin="50">
+        
+        <!-- First table -->
+        <table class="p.solid" width="100%" and height="80%">
+
+            <br>
+            <td>
+
+                <!-- header -->
+                <font face="Arial" size="1">
+                    <h1 align="center"><b>DCS3003 Website Design Course Survey</b></h1>  
+
+                </font>
+
+                <!-- Inside table -->
+                <table class="p2" width="90%" and height="50%" align="center">  
+                    
+                    <!-- form content -->
+                    <td>
+                        
+                        <table class="p3" width="90%" and height="50%" align="center" >
+
+                            <!-- header 1 -->
+                            <tr>
+                                <td>
+                                    <font size="3"> <a href="#"><br>Personal details</a> </font>
+                                    <br><br>
+                                </td>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                             
+                            <!-- row 1 -->
+                            <tr>
+
+                                <!-- Input 1 (1)-->
+                                <td>
+                                <font face="Arial" size="2">
+                                    <b>Student ID</b>
+                                </font>
+                                 
+                                </td>
+
+                                <td>
+                                <font>:</font> <input type="text" name="fname" size="20" maxlength="10">
+                                </td>
+
+                                <!-- Input 2 (1)-->
+                                <td>
+                                <font face="Arial" size="2" color="black">
+                                    <b>Student Name
+                                    </b></font>
+                                 
+                                </td>
+                                 
+                                <td>
+                                <font>:</font> <input type="text" name="fname" size="20" maxlength="10">
+                                </td>
+
+                            </tr>
+
+                            <!-- row 2 -->
+                            <tr>
+
+                                <!-- Input 1 (2)-->
+                                <td>
+                                <font face="Arial" size="2">
+                                    <b>Email address</b>
+                                </font>
+                                 
+                                </td>
+
+                                <td>
+                                <font>:</font> <input type="text" name="Iname"  size="20" maxlength="10">
+                                </td>
+
+                                <!-- Input 2 (2)-->
+                                <td>    
+                                <font face="Arial" size="2">
+                                    <b>IC No.</b>
+                                </font>  
+                                </td>
+
+                                <td>
+                                <font>:</font> <input type="text" name="Iname" size="20" maxlength="10">
+                                </td>
+                                 
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    <font face="Arial" size="2">
+                                        <b>Course</b>
+                                    </font>
+                                     
+                                    </td>
+    
+                                    <td>
+                                    <font>:</font>   
+                                        <select>
+
+                                            <option value="0"> List of Course  </option>                                            
+                                            <option value="DCS">  Diploma In Science </option>
+                                            <option value="DIB">  Diploma In Business </option>
+                                            <option value="DAS">  Diploma In Airline Services  </option>
+
+                                        </select>
+
+                                    </td>
+    
+                                    <!-- Input 2 (2)-->
+                                    <td>    
+                                    <font face="Arial" size="2">
+                                        <b>D.O.B</b>
+                                    </font>  
+                                    </td>
+    
+                                    <td>
+                                    <font>:</font> <input type="date" name="Iname" size="20" maxlength="10">
+                                    </td>
+
+                            </tr>
+
+                        </table>
+
+                    </td>
+                    
+                    <tr><td><br></td></tr>
+                    
+                    <!-- Question content  -->
+                    <tr>
+
+                        <td>
+                        <table class="p3" width="90%" and height="50%" align="center" >
+
+                            <!-- header 1 -->
+                            <tr>
+                                <td>
+                                    <font size="3"> <a href="#"><br>Questions</a> </font> <br>
+                                    <font size="2" id="red"><b>Please answer all questions</b></font>
+                                    <br><br>
+                                </td>
+
+                                <td></td>
+                                 
+                            </tr>
+                             
+                            <!-- row 1 -->
+                            <tr>
+
+                                <!-- Input 1 (2)-->
+                                <!-- Part 1 -->
+                                <td>
+                                <font face="Arial" size="2">
+                                    <b> 1) Have you grasped the content of the Website Design so far?<br><font id="white">s</font> </b>
+                                </font>
+                                </td>
+                                <!-- Part 2 -->
+                                 
+                                <td>
+                                    <input type="radio"  class="p4"><b> <font size="2"> Yes </font></b> <br>
+                                    <input type="radio"  class="p4"><b> <font size="2"> No </font></b> 
+                                </td>
+
+                            </tr>
+
+                            <!-- row 2  -->
+                            <tr>
+
+                                <!-- Input 2 (2)-->
+                                <!-- Part 1 -->
+                                <td>
+                                <font face="Arial" size="2">
+                                    <b> 2) Can you create a simple but interactive website?<br><font id="white">s</font></b>
+                                </font>
+
+                                </td>
+                                 
+
+                                <!-- Part 2 -->
+                                 
+                                <td>
+                                    <input type="radio" class="p4"><b> <font size="2"> Yes </font></b> <br>
+                                    <input type="radio" class="p4"><b> <font size="2"> No </font></b> 
+                                </td>
+                                 
+                            </tr>
+
+                            <!-- row 3  -->
+                            <tr>
+
+                                <!-- Input 2 (3)-->
+                                <!-- Part 1 -->
+                                <td>
+                                <font face="Arial" size="2">
+                                    <b> 3) What have you learnt so far?<br><font id="white">s</font></b>
+                                </font>
+    
+                                    <!-- Part 2 -->
+                                     
+                                <td>
+                                    
+                                    <input type="checkbox" class="p4"><b> <font size="2"> Knowledge </font></b> <br>
+                                    <input type="checkbox" class="p4"><b> <font size="2"> Practical Skills </font></b> <br>
+                                      
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <!-- Input 2 (3)-->
+                                <!-- Part 1 -->
+                                <td>
+                                <font face="Arial" size="2">
+                                     
+                                </font>
+    
+                                    <!-- Part 2 -->
+                                     
+                                <td>
+                                     
+                                    <input type="checkbox" class="p4"><b> <font size="2"> Problem Solving </font></b> <br>
+                                    <input type="checkbox" class="p4"><b> <font size="2"> Self-Exploration Skills </font></b> 
+                                </td>
+
+                            </tr>
+
+                            <!-- row 4 -->
+                            <tr>
+
+                                <!-- Input 3 (3)-->
+                                <!-- Part 1 -->
+                                <td>
+                                <font face="Arial" size="2">
+                                    <b> 4) Wish items/ Suggestions <font id="red">*</font></b>
+                                </font>
+                                </td>
+
+                                <!-- Part 2 -->                                                                      
+                                <td></td>
+                                    
+                            </tr>
+
+                            <tr>
+
+                                <!-- Input 3 (3)-->
+                                <!-- Part 1 -->
+                                <td colspan="3">
+                                <font face="Arial" size="2">
+
+                                    <textarea rows="4" cols="110" name="Address" style="resize: none;"></textarea>
+                                </font>
+
+                                </td>
+ 
+                            </tr>
+ 
+                            <!-- button -->
+                            <tr>
+
+                                <!-- Input 3 (3)-->
+                                <!-- Part 1 -->
+                                
+                                <td colspan="3" align="center" >
+                                    <input type="submit" value="Reset">
+                                     
+                                    <input type="reset"  value="Submit">
+
+                                </td>
+ 
+                            </tr>
+                             
+                        </table>
+
+                        </td>
+
+                    </tr>
+               
+                </table>
+
+                <!-- space below all content -->
+                <br><br>
+                
+            </td>
+       
+        </table>
+ 
+    </body>
+
+</html>
