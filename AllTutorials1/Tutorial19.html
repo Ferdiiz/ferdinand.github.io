@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <title> Tutorial 19 </title>
+        <link rel=icon href="sunflower.jpg" type="image/jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Hi Teacher this part is for the Javascript Conditions and Output -->
+        <script>
+
+            function random(){
+
+                var a = document.getElementById("input").value;
+
+                // condition 1
+                if(a === "Diploma In Computer Science"){
+
+                    var array = ["DCS3001", "DCS3002", "DCS3003"];
+
+                }
+
+                // condition 2
+                else if(a === "Diploma In Business"){
+
+                    
+                    var array = ["DIB2001", "DIB2002", "DIB2003"];
+
+                }
+
+                // condition 3
+                else if(a === "Diploma In Airline Services"){
+                    
+                    var array = ["DIA1001", "DIA1002", "DIA1003"];
+
+                }
+
+                // condition 4
+                else{
+
+                    var array = [];
+
+                }
+
+                // site of array
+                // after course selection types of intake number will be shown on intake row
+                var string = "";
+                for( i = 0; i < array.length; i++ ) {
+
+                    // as in intake row option is empty for "array[i]" of any targeted condition var array to be shown within <option>
+                    string = string +"<option>"+ array[i]+"</option>";
+
+                }
+
+                // as in intake row select is empty for previous string "string = string +"<option>"+ array[i]+"</option>";"
+                // to be shown within <select>
+                string = "<select>" + string + "</select>";
+
+                // locating "<div id= output>" down below
+                document.getElementById("output").innerHTML = string;
+
+
+            }
+
+        </script>
+
+    </head>
+
+    <!-- css -->
+    <style>
+
+        table  
+        {
+            color: powderblue;
+            border-style: solid;
+            border-collapse: collapse;
+            background-color: rgba(119, 88, 148, 0.423);
+        }
+
+        tr 
+        {   
+            color: black;
+            font-family: Helvetica
+        }
+
+        caption 
+        {
+            font-family: Helvetica
+        }
+
+        .p1
+        {
+            color: rgb(0, 0, 0);
+            
+        }
+
+        .container {    
+            column-count: 2;
+            column-gap: 100px;
+            column-rule-style: solid;
+            column-rule-width: 2px;
+            column-rule-color: #000000;
+        }
+
+        .image1 {
+
+            background-image: url(Water.gif); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+   
+    </style>
+
+    <!-- content -->
+    <body topmargin="20" leftmargin="50" class="image1">
+        
+        <table width="60%" and height="50%" align="center">  
+            
+            <center> 
+
+                <!-- form -->
+                <form>
+                    
+                    <!-- header -->
+                    <h1 align="center">
+                    <font face="Cascadia Code SemiBold" size="3">
+                        
+                        <h1 style="color: beige; text-shadow: 2px 2px 4px #000000;"><b><br>Personal Details:</b></h1>
+                    
+                    </font>
+
+                    <!-- First name -->
+                    <br> 
+                    <tr>
+                        <td style="background-color: rgba(221, 160, 221, 0.432);"><b>First Name:</b> </td> 
+                        <td><input type="text" name="fname" size="40" maxlength="5"> </td>
+                    </tr>
+                    
+                    <!-- Last name -->
+                    <tr>
+                        <td style="background-color: rgba(255, 255, 0, 0.292);"><b>Last Name:</b></td> 
+                        <td><input type="text" name="Iname"></td>
+                    </tr>
+
+                    <!-- Gender -->
+                    <!-- radio button means able to only choose one -->
+                    <tr>
+                        <td style="background-color: rgba(172, 255, 47, 0.301);"> 
+                            <b>Gender:</b>
+                        </td>
+                        <td style="color: aliceblue;">
+                            <input type="radio" name="Gender" value="Male"> <b> Male </b>
+                            <input type="radio" name="Gender" value="Female"> <b> Female </b>
+                        </td>
+                    </tr>
+
+                    <!-- Address -->
+                    <tr>
+                        <td style="background-color: rgba(127, 255, 212, 0.323);"><b>Address:</b></td>
+                        <td><textarea rows="4" cols="40" name="Address" style="resize: none;"></textarea></td>
+                    </tr>
+
+                    <!-- Date of Birth -->
+                    <tr>
+                        <td style="background-color: rgba(216, 112, 147, 0.259);"><b>Date of birth:</b></td>
+                        <td><input type="date" name="dob" ></td>
+                    </tr>
+                    
+                    <!-- Login Password -->
+                    <tr>
+                        <td style="background-color: rgba(217, 221, 91, 0.281);"><b> Login password: </b></td>
+                        <td><input type="password" name="loginpass"></td>
+                    </tr>
+                    
+                    <!-- Hi teacher this part onwards will be related to JavaScript -->
+                    <!-- the event I will be using is onchange -->
+                    <!-- content which links to JavaScript (1)-->
+                    <!-- Event -> Onchange -->
+                    <!-- Types of Course -->
+                    <tr>
+
+                        <td style="background-color: rgba(60, 219, 60, 0.216);">
+                            <b>Course:</b>
+                        </td>
+                        
+                        <td>
+
+                            <!-- onchange 1 -->
+                            <select id="input" onchange="random()">
+
+                                <option>  Diploma In Computer Science </option>
+                                <option>  Diploma In Business </option>
+                                <option>  Diploma In Airline Services </option>
+
+                            </select>                            
+
+                        </td>
+
+                    </tr> 
+                    
+                    <!-- content which links to JavaScript (2)-->
+                    <!-- Event -> Onchange --> 
+                    <!-- Intake number -->
+                    <tr>
+
+                        <td style="background-color: rgba(104, 196, 212, 0.216);">
+                            <b>Intake:</b>
+                        </td>
+
+                        <!-- site of arrays -->
+                        <td>
+                            
+                            <!-- Output after course selection -->
+                            <div id="output" >
+
+                                <!-- onchange 2 -->
+                                <select id="input" onchange="random()">
+
+                                    <option></option>
+
+                                </select>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+                    
+                    <!-- Button -->
+                    <tr>
+                        
+                        <td colspan="2" align="center">
+                            <input type="submit" value="submit">
+                            <input type="reset"  value="reset">
+                        </td>
+                    
+
+                    </tr>
+
+                </form>
+
+            </center>
+
+        </table>  
+
+    </body>
+
+</html>
